@@ -19,7 +19,7 @@ env:
 jobs:
 # Please do not rename this job
   build-project:
-    name: build mod3
+    name: build cluster
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -37,5 +37,5 @@ jobs:
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
-          config-file: .deploy-now/mod3/config.yaml
+          config-file: .deploy-now/cluster/config.yaml
           action: upload
